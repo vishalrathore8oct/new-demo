@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onkeypress Event</title>
+    <style>
+        #keyDisplay {
+            font-size: 24px;
+            color: #333;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="keypressInput" placeholder="Type something...">
+    <div id="keyDisplay"></div>
+
+    <script>
+        document.getElementById('keypressInput').addEventListener('keypress', function(event) {
+            document.getElementById('keyDisplay').textContent = `You pressed: ${event.key}`;
+        });
+    </script>
+</body>
+</html>
