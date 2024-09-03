@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Highlighting</title>
+</head>
+<body>
+    <p id="text">
+        JavaScript is a versatile programming language that allows developers to create dynamic and interactive web applications.
+    </p>
+
+    <script>
+        const paragraph = document.getElementById('text');
+        paragraph.innerHTML = paragraph.textContent.split(' ').map(word =>
+            word.length > 8 ? `<span style="background-color: yellow">${word}</span>` : word
+        ).join(' ');
+    </script>
+</body>
+</html>

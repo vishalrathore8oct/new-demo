@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add List Items</title>
+</head>
+<body>
+    <ol id="itemList"></ol>
+    <button id="addButton">Add Item</button>
+
+    <script>
+        const items = ['HTML', 'CSS', 'JavaScript', 'React', 'Node.js'];
+        let index = 0;
+        document.getElementById('addButton').addEventListener('click', function() {
+            if (index < items.length) {
+                const li = document.createElement('li');
+                li.textContent = items[index++];
+                document.getElementById('itemList').appendChild(li);
+            } else {
+                alert("All items have been added.");
+            }
+        });
+    </script>
+</body>
+</html>
